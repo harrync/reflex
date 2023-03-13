@@ -34,8 +34,4 @@
     "watch:docs": "node-sass-chokidar --watch --recursive --precision 8 --output-style expanded docs/scss/docs.scss docs/css/docs.css",
     "start": "./node_modules/.bin/http-server ./docs -a localhost -c10"
   },
-  "devDependencies": {
-    "http-server": "^0.12.3",
-    "node-sass-chokidar": "^1.5.0"
-  }
 }
