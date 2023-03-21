@@ -14,9 +14,6 @@
     @if $type == width and $index > 0 {
         .#{$reflex-prefix}#{$class}#{$index} {
             width: calc(($index / $reflex-columns) * 100);
-            @if $legacy-support == true {
-                *width: percentage(calc($index / $reflex-columns)) - .1; // ie7 css hack
-            }
         }
     }
 }
@@ -32,31 +29,11 @@
 // defaults for auto cols
 @mixin setup-auto-cols() {
     @include flex(1, 0, 0px); // a unit on last value is required by IE10-11
-
-    @if $legacy-support == true {
-        width: auto;
-    }
 }
 
 // --------------------------------------------------
 // inline-block specific mixins
 // --------------------------------------------------
-
-@mixin setup-whitespace() {
-    @if $legacy-support == true {
-        letter-spacing: -.31em;
-        *letter-spacing: normal;
-        word-spacing: -.43em;
-    }
-}
-
-@mixin reset-whitespace() {
-    @if $legacy-support == true {
-        letter-spacing: normal;
-        word-spacing: normal;
-        white-space: normal;
-    }
-}
 
 @mixin reset-text-align() {
     //
@@ -111,9 +88,6 @@
         $offset: calc($offset * 100);
     }
     margin-left: $offset;
-    @if $legacy-support == true {
-        *margin-left: percentage(calc($index / $reflex-columns)) - .1; // ie7 css hack
-    }
 }
 
 @mixin make-offset-helpers() {
