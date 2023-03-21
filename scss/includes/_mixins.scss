@@ -13,7 +13,7 @@
 @mixin calc-reflex-columns($index, $class, $type) {
     @if $type == width and $index > 0 {
         .#{$reflex-prefix}#{$class}#{$index} {
-            width: calc(($index / $reflex-columns) * 100);
+            width: calc(100% * (#{$index} / #{$reflex-columns}));
         }
     }
 }
@@ -85,7 +85,7 @@
     $offset: calc($index / $reflex-columns);
     // convert to percentage only if not zero
     @if $offset != 0 {
-        $offset: calc($offset * 100);
+        $offset: calc(100% * #{$offset});
     }
     margin-left: $offset;
 }
