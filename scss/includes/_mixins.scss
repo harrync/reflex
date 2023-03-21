@@ -13,7 +13,7 @@
 @mixin calc-reflex-columns($index, $class, $type) {
     @if $type == width and $index > 0 {
         .#{$reflex-prefix}#{$class}#{$index} {
-            width: percentage(calc($index / $reflex-columns));
+            width: calc(($index / $reflex-columns) * 100);
             @if $legacy-support == true {
                 *width: percentage(calc($index / $reflex-columns)) - .1; // ie7 css hack
             }
@@ -108,7 +108,7 @@
     $offset: calc($index / $reflex-columns);
     // convert to percentage only if not zero
     @if $offset != 0 {
-        $offset: percentage($offset);
+        $offset: calc($offset * 100);
     }
     margin-left: $offset;
     @if $legacy-support == true {
