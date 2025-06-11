@@ -151,6 +151,7 @@
 // --------------------------------------------------
 
 // Removes internal padding from all columns in a grid
+.#{$reflex-prefix}col-grid-bleed,
 .#{$reflex-prefix}grid-bleed {
     [class*="#{$reflex-prefix}col-"] {
         padding: 0;
