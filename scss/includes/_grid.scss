@@ -44,10 +44,6 @@
 // reflex grid
 // --------------------------------------------------
 
-.#{$reflex-prefix}col-grid {
-  padding: 0;
-}
-
 .#{$reflex-prefix}grid {
     @include box-sizing(border-box);
     display: block;
@@ -203,4 +199,8 @@
 
 @media (min-width: $reflex-xlg) {
     @include loop-offset-helpers($reflex-columns - 1, '-xlg');
+}
+
+.#{$reflex-prefix}col-grid {
+  padding: 0;
 }
