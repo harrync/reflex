@@ -66,23 +66,26 @@
 // reflex col defaults
 // --------------------------------------------------
 
-[class*="#{$reflex-prefix}col-"] {
+.#{$reflex-prefix}col-grid,
+.#{$reflex-prefix}grid {
+  [class*="#{$reflex-prefix}col-"] {
     @include box-sizing(border-box);
     position: relative;
     width: 100%;
     vertical-align: top;
     padding: $reflex-grid-spacing;
-
+    
     &::before,
     &::after {
-        @include box-sizing(border-box);
+      @include box-sizing(border-box);
     }
-
+    
     // handle grids nested in columns
     .#{$reflex-prefix}grid {
-        @include flex(1, 1, auto);
-        margin: calc($reflex-grid-spacing * -1);
+      @include flex(1, 1, auto);
+      margin: calc($reflex-grid-spacing * -1);
     }
+  }
 }
 
 // --------------------------------------------------
