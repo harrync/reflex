@@ -44,6 +44,10 @@
 // reflex grid
 // --------------------------------------------------
 
+.#{$reflex-prefix}col-grid {
+  padding: 0;
+}
+
 .#{$reflex-prefix}grid {
     @include box-sizing(border-box);
     display: block;
@@ -66,9 +70,7 @@
 // reflex col defaults
 // --------------------------------------------------
 
-.#{$reflex-prefix}col-grid,
-.#{$reflex-prefix}grid {
-  [class*="#{$reflex-prefix}col-"] {
+[class*="#{$reflex-prefix}col-"] {
     @include box-sizing(border-box);
     position: relative;
     width: 100%;
@@ -85,7 +87,6 @@
       @include flex(1, 1, auto);
       margin: calc($reflex-grid-spacing * -1);
     }
-  }
 }
 
 // --------------------------------------------------
