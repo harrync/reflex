@@ -10,6 +10,9 @@
 //
 // Structure and calculations are inspired by twitter bootstrap
 
+@forward 'includes/variables';
+@forward 'includes/mixins';
+
 @use 'includes/variables' as *;
 @use 'includes/mixins' as *;
 @use 'includes/grid' as *;

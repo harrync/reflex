@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "sass:list";
+@forward 'variables';
 @use 'variables' as *;
 
 // --------------------------------------------------
