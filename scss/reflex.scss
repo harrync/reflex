@@ -10,8 +10,8 @@
 //
 // Structure and calculations are inspired by twitter bootstrap
 
-@import 'includes/variables';
-@import 'includes/mixins';
-@import 'includes/grid';
-@import 'includes/helpers';
+@use 'includes/variables' as *;
+@use 'includes/mixins' as *;
+@use 'includes/grid' as *;
+@use 'includes/helpers' as *;
 
